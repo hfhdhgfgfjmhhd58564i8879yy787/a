@@ -33,15 +33,16 @@ const app = express();
 // }
 // },1000)
 app.get('/a.m3u8', async (req, res) => {
-  try{
-  const a = await axios.get('https://247c.mrgamingstreams.com/mrgamingbtsport2.m3u8');
-  res.send(a.data);
-    console.log("Working")
-  }catch{
-    res.end();
+  // try{
+  // const a = await axios.get('https://247c.mrgamingstreams.com/mrgamingbtsport2.m3u8');
+  // res.send(a.data);
+  //   console.log("Working")
+  // }catch{
+  //   res.end();
 
-  }
+  // }
   // res.send(x)
+  res.redirect('https://247c.mrgamingstreams.com/mrgamingbtsport2.m3u8');
 })
 
 app.get('*', async (req, res) => {
